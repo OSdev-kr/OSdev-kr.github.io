@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>osdev-kr</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: #fafafa;
+    }
+
+    /* 헤더 스타일 */
+    header {
+      background-color: #333;
+      color: #fff;
+      padding: 1rem;
+    }
+    header h1 {
+      margin: 0;
+      font-size: 1.5rem;
+    }
+    header p {
+      margin: 0.5rem 0 0;
+      font-size: 1rem;
+    }
+
+    /* 메인 컨테이너 (왼쪽 내비게이션 + 오른쪽 메인 영역) */
+    .container {
+      display: flex;
+      flex-direction: row;
+      min-height: 90vh; /* 화면 전체를 채우도록 */
+    }
+
+    /* 왼쪽 내비게이션 메뉴 */
+    nav {
+      background-color: #f2f2f2;
+      width: 200px;
+      padding: 1rem;
+    }
+    nav ul {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+    }
+    nav ul li {
+      margin-bottom: 0.5rem;
+    }
+    nav a {
+      text-decoration: none;
+      color: #333;
+      font-weight: bold;
+    }
+    nav a:hover {
+      color: #666;
+    }
+
+    /* 오른쪽 메인 영역 (iframe) */
+    main {
+      flex: 1;
+      padding: 1rem;
+    }
+    iframe {
+      width: 100%;
+      height: 600px;
+      border: 1px solid #ccc;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>OSdev-kr</h1>
+    <p>OS개발 커뮤니티에 오신 걸 환영합니다</p>
+  </header>
+
+  <div class="container">
+    <nav>
+      <ul>
+        <!-- 클릭 시 iframe에 linux.com을 표시 -->
+        <li><a href="https://daisy-witty-airplane.glitch.me" target="contentFrame">리눅스</a></li>
+        <!-- 클릭 시 iframe에 start.com을 표시 (필요에 따라 다른 사이트로 변경 가능) -->
+        <li><a href="https://silent-snowy-seeker.glitch.me" target="contentFrame">처음부터 끝까지</a></li>
+      </ul>
+    </nav>
+
+    <main>
+      <!-- 기본적으로 linux.com을 표시하도록 설정 -->
+      <iframe name="contentFrame" src="https://www.linux.com" title="Content Frame"></iframe>
+    </main>
+  </div>
+
+</body>
+</html>
